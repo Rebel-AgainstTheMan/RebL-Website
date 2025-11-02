@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiments - Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.gstatic.com/s/orbitron/v31/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyGy6xpmI.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="1.index.html">Rebel Knight</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="1.index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="2.games.html" class="nav-link">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a href="3.writing.html" class="nav-link">Writing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="4.music.html" class="nav-link">Music</a>
+                </li>
+                <li class="nav-item">
+                    <a href="5.experiments.html" class="nav-link">Experiments</a>
+                </li>
+                <li class="nav-item">
+                    <a href="1.index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Experiments Hero Section -->
+        <section class="hero experiments-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Creative <span class="highlight">Experiments</span></h1>
+                <p class="hero-subtitle">Prototypes, ideas, and digital explorations</p>
+                <p class="hero-description">Discover my creative experiments spanning world-building, game development, technical explorations, and innovative projects.</p>
+            </div>
+        </section>
+
+        <!-- Experiments Section -->
+        <section class="experiments-section">
+            <div class="experiments-container">
+                <!-- Left Content Area -->
+                <div class="experiments-content">
+                    <div class="experiments-search-container">
+                        <div class="search-controls">
+                            <input type="text" id="experimentSearch" class="experiments-search-input" placeholder="Search experiments...">
+                            <select id="experimentSort" class="sort-dropdown">
+                                <option value="date-newest">Newest First</option>
+                                <option value="date-oldest">Oldest First</option>
+                                <option value="alpha-az">A-Z</option>
+                                <option value="alpha-za">Z-A</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="experiments-grid">
+                        <!-- Experiments will be added here via admin panel -->
+                    </div>
+                </div>
+
+                <!-- Right Panel -->
+                <div class="experiments-sidebar">
+                    <h3 class="sidebar-title">Categories</h3>
+                    <div class="category-nav">
+                        <button class="category-btn active" data-category="all">All Experiments</button>
+                        <button class="category-btn" data-category="world-building">World Building</button>
+                        <button class="category-btn" data-category="games">Games</button>
+                        <button class="category-btn" data-category="specifics">Specifics</button>
+                        <button class="category-btn" data-category="other">Other</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Rebel Knight.</p>
+        </div>
+    </footer>
+
+    <!-- Admin Panel -->
+    <div id="adminButton" class="admin-button" title="Admin Panel (Double-click)">
+        ⚙️
+    </div>
+
+    <!-- Admin Modal -->
+    <div id="adminModal" class="admin-modal">
+        <div class="admin-modal-content">
+            <div class="admin-header">
+                <h2>Content Management</h2>
+                <button class="admin-close">&times;</button>
+            </div>
+            <div class="admin-nav">
+                <button class="admin-nav-btn active" data-section="add">Add Content</button>
+                <button class="admin-nav-btn" data-section="manage">Manage Content</button>
+            </div>
+            <div id="admin-add" class="admin-section active">
+                <div class="admin-form">
+                    <label for="contentType">Content Type:</label>
+                    <select id="contentType" class="admin-select">
+                        <option value="">Select Type...</option>
+                        <option value="game">Game</option>
+                        <option value="writing">Writing</option>
+                        <option value="music">Music</option>
+                        <option value="experiment">Experiment</option>
+                    </select>
+                    <div id="dynamicForm" class="dynamic-form"></div>
+                    <button id="addContentBtn" class="admin-btn primary" disabled>Add Content</button>
+                </div>
+            </div>
+            <div id="admin-manage" class="admin-section">
+                <div class="manage-controls">
+                    <select id="manageType" class="admin-select">
+                        <option value="">Select Type to Manage...</option>
+                        <option value="game">Games</option>
+                        <option value="writing">Writing</option>
+                        <option value="music">Music</option>
+                        <option value="experiment">Experiments</option>
+                    </select>
+                </div>
+                <div id="contentList" class="content-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

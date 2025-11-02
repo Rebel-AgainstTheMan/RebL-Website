@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing - Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.gstatic.com/s/orbitron/v31/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyGy6xpmI.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="1.index.html">Rebel Knight</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="1.index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="2.games.html" class="nav-link">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a href="3.writing.html" class="nav-link">Writing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="4.music.html" class="nav-link">Music</a>
+                </li>
+                <li class="nav-item">
+                    <a href="5.experiments.html" class="nav-link">Experiments</a>
+                </li>
+                <li class="nav-item">
+                    <a href="1.index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Writing Hero Section -->
+        <section class="hero writing-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Literary <span class="highlight">Arsenal</span></h1>
+                <p class="hero-subtitle">Words as weapons, stories as shields</p>
+                <p class="hero-description">Explore my collection of cyberpunk tales, tech articles, and creative expressions from the digital frontier.</p>
+            </div>
+        </section>
+
+        <!-- Writing Feed Section -->
+        <section class="writing-section">
+            <div class="container">
+                <div class="writing-controls">
+                    <div class="search-filter-row">
+                        <input type="text" id="writingSearch" class="writing-search-input" placeholder="Search writings...">
+                        <select id="sortWriting" class="sort-dropdown">
+                            <option value="date-newest">Newest First</option>
+                            <option value="date-oldest">Oldest First</option>
+                            <option value="alpha-az">A-Z</option>
+                            <option value="alpha-za">Z-A</option>
+                        </select>
+                    </div>
+                    <div class="filter-row">
+                        <select id="typeFilter" class="filter-dropdown">
+                            <option value="all">All Types</option>
+                            <option value="short-story">Short Stories</option>
+                            <option value="article">Articles</option>
+                            <option value="book">Books</option>
+                            <option value="poem">Poetry</option>
+                            <option value="blog">Blog Posts</option>
+                            <option value="writing-challenge">Writing Challenges</option>
+                        </select>
+                        <select id="genreFilter" class="filter-dropdown">
+                            <option value="all">All Genres</option>
+                            <option value="cyberpunk">Cyberpunk</option>
+                            <option value="sci-fi">Science Fiction</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="horror">Horror</option>
+                            <option value="mystery">Mystery</option>
+                            <option value="tech">Technology</option>
+                            <option value="philosophy">Philosophy</option>
+                            <option value="adventure">Adventure</option>
+                        </select>
+                    </div>
+                    <div class="exclusion-row">
+                        <select id="excludeTypeFilter" class="exclude-dropdown">
+                            <option value="none">Don't Exclude Types</option>
+                            <option value="short-story">Exclude Short Stories</option>
+                            <option value="article">Exclude Articles</option>
+                            <option value="book">Exclude Books</option>
+                            <option value="poem">Exclude Poetry</option>
+                            <option value="blog">Exclude Blog Posts</option>
+                            <option value="writing-challenge">Exclude Writing Challenges</option>
+                        </select>
+                        <select id="excludeGenreFilter" class="exclude-dropdown">
+                            <option value="none">Don't Exclude Genres</option>
+                            <option value="cyberpunk">Exclude Cyberpunk</option>
+                            <option value="sci-fi">Exclude Science Fiction</option>
+                            <option value="fantasy">Exclude Fantasy</option>
+                            <option value="horror">Exclude Horror</option>
+                            <option value="mystery">Exclude Mystery</option>
+                            <option value="tech">Exclude Technology</option>
+                            <option value="philosophy">Exclude Philosophy</option>
+                            <option value="adventure">Exclude Adventure</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="writing-grid">
+                    <!-- Writings will be added here via admin panel -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Writing Preview Modal -->
+        <div id="writingPreview" class="preview-modal">
+            <div class="preview-content">
+                <button class="preview-close">&times;</button>
+                <div class="preview-header">
+                    <h2 id="previewTitle"></h2>
+                    <div id="previewBadges"></div>
+                </div>
+                <div class="preview-body">
+                    <p id="previewText"></p>
+                </div>
+                <div class="preview-footer">
+                    <button id="previewReadButton" class="preview-read-btn">Read Full Story</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Rebel Knight.</p>
+        </div>
+    </footer>
+
+    <!-- Admin Panel -->
+    <div id="adminButton" class="admin-button" title="Admin Panel (Double-click)">
+        ⚙️
+    </div>
+
+    <!-- Admin Modal -->
+    <div id="adminModal" class="admin-modal">
+        <div class="admin-modal-content">
+            <div class="admin-header">
+                <h2>Content Management</h2>
+                <button class="admin-close">&times;</button>
+            </div>
+            <div class="admin-nav">
+                <button class="admin-nav-btn active" data-section="add">Add Content</button>
+                <button class="admin-nav-btn" data-section="manage">Manage Content</button>
+            </div>
+            <div id="admin-add" class="admin-section active">
+                <div class="admin-form">
+                    <label for="contentType">Content Type:</label>
+                    <select id="contentType" class="admin-select">
+                        <option value="">Select Type...</option>
+                        <option value="game">Game</option>
+                        <option value="writing">Writing</option>
+                        <option value="music">Music</option>
+                        <option value="experiment">Experiment</option>
+                    </select>
+                    <div id="dynamicForm" class="dynamic-form"></div>
+                    <button id="addContentBtn" class="admin-btn primary" disabled>Add Content</button>
+                </div>
+            </div>
+            <div id="admin-manage" class="admin-section">
+                <div class="manage-controls">
+                    <select id="manageType" class="admin-select">
+                        <option value="">Select Type to Manage...</option>
+                        <option value="game">Games</option>
+                        <option value="writing">Writing</option>
+                        <option value="music">Music</option>
+                        <option value="experiment">Experiments</option>
+                    </select>
+                </div>
+                <div id="contentList" class="content-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

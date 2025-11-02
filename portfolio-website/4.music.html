@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music - Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.gstatic.com/s/orbitron/v31/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyGy6xpmI.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="1.index.html">Rebel Knight</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="1.index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="2.games.html" class="nav-link">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a href="3.writing.html" class="nav-link">Writing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="4.music.html" class="nav-link">Music</a>
+                </li>
+                <li class="nav-item">
+                    <a href="5.experiments.html" class="nav-link">Experiments</a>
+                </li>
+                <li class="nav-item">
+                    <a href="1.index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Music Hero Section -->
+        <section class="hero music-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Sonic <span class="highlight">Rebellion</span></h1>
+                <p class="hero-subtitle">Electronic beats from the digital underground</p>
+                <p class="hero-description">Explore my musical journey through cyberpunk soundscapes, ambient textures, and electronic experiments.</p>
+            </div>
+        </section>
+
+        <!-- Music Navigation -->
+        <section class="music-nav-section">
+            <div class="container">
+                <div class="music-main-nav">
+                    <button class="music-main-nav-btn active" data-category="original">Original</button>
+                    <button class="music-main-nav-btn" data-category="cover">Covers</button>
+                </div>
+                <div class="music-sub-nav">
+                    <div class="music-sub-nav-container" id="original-nav">
+                        <button class="music-sub-nav-btn active" data-section="original-singles">Singles</button>
+                        <button class="music-sub-nav-btn" data-section="original-albums">Albums</button>
+                    </div>
+                    <div class="music-sub-nav-container" id="cover-nav" style="display: none;">
+                        <button class="music-sub-nav-btn active" data-section="cover-singles">Singles</button>
+                        <button class="music-sub-nav-btn" data-section="cover-albums">Albums</button>
+                    </div>
+                </div>
+                <div class="music-sort">
+                    <select id="musicSort" class="sort-dropdown">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Original Singles Section -->
+        <section id="original-singles-section" class="music-section active">
+            <div class="container">
+                <h2 class="section-title">Original Singles</h2>
+                <div class="music-grid original-singles-grid">
+                    <!-- Original singles will be added here via admin panel -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Original Albums Section -->
+        <section id="original-albums-section" class="music-section">
+            <div class="container">
+                <h2 class="section-title">Original Albums</h2>
+                <div class="music-grid original-albums-grid">
+                    <!-- Original albums will be added here via admin panel -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Cover Singles Section -->
+        <section id="cover-singles-section" class="music-section">
+            <div class="container">
+                <h2 class="section-title">Cover Singles</h2>
+                <div class="music-grid cover-singles-grid">
+                    <!-- Cover singles will be added here via admin panel -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Cover Albums Section -->
+        <section id="cover-albums-section" class="music-section">
+            <div class="container">
+                <h2 class="section-title">Cover Albums</h2>
+                <div class="music-grid cover-albums-grid">
+                    <!-- Cover albums will be added here via admin panel -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Album Track Modal -->
+        <div id="albumModal" class="album-modal">
+            <div class="album-modal-content">
+                <button class="modal-close">&times;</button>
+                <div class="album-header">
+                    <div class="album-artwork-large"></div>
+                    <div class="album-details">
+                        <h2 id="modalAlbumTitle"></h2>
+                        <p id="modalAlbumInfo"></p>
+                        <p id="modalReleaseDate"></p>
+                    </div>
+                </div>
+                <div class="tracklist">
+                    <h3>Track Listing</h3>
+                    <div id="trackList" class="track-list-container"></div>
+                    <div class="album-total">
+                        <span id="totalDuration"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Rebel Knight.</p>
+        </div>
+    </footer>
+
+    <!-- Admin Panel -->
+    <div id="adminButton" class="admin-button" title="Admin Panel (Double-click)">
+        ⚙️
+    </div>
+
+    <!-- Admin Modal -->
+    <div id="adminModal" class="admin-modal">
+        <div class="admin-modal-content">
+            <div class="admin-header">
+                <h2>Content Management</h2>
+                <button class="admin-close">&times;</button>
+            </div>
+            <div class="admin-nav">
+                <button class="admin-nav-btn active" data-section="add">Add Content</button>
+                <button class="admin-nav-btn" data-section="manage">Manage Content</button>
+            </div>
+            <div id="admin-add" class="admin-section active">
+                <div class="admin-form">
+                    <label for="contentType">Content Type:</label>
+                    <select id="contentType" class="admin-select">
+                        <option value="">Select Type...</option>
+                        <option value="game">Game</option>
+                        <option value="writing">Writing</option>
+                        <option value="music">Music</option>
+                        <option value="experiment">Experiment</option>
+                    </select>
+                    <div id="dynamicForm" class="dynamic-form"></div>
+                    <button id="addContentBtn" class="admin-btn primary" disabled>Add Content</button>
+                </div>
+            </div>
+            <div id="admin-manage" class="admin-section">
+                <div class="manage-controls">
+                    <select id="manageType" class="admin-select">
+                        <option value="">Select Type to Manage...</option>
+                        <option value="game">Games</option>
+                        <option value="writing">Writing</option>
+                        <option value="music">Music</option>
+                        <option value="experiment">Experiments</option>
+                    </select>
+                </div>
+                <div id="contentList" class="content-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script-new.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

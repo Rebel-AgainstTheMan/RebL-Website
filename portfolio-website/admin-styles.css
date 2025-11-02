@@ -1,0 +1,346 @@
+/* Admin Panel Additional Styles */
+
+/* File input styles */
+.file-input-container {
+    margin-top: 8px;
+}
+
+.admin-file-input {
+    width: 100%;
+    padding: 8px;
+    border: 2px dashed #007acc;
+    border-radius: 4px;
+    background: #0a0a0a;
+    color: #ffffff;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.admin-file-input:hover {
+    border-color: #00bfff;
+}
+
+.admin-file-input:focus {
+    outline: none;
+    border-color: #00bfff;
+    box-shadow: 0 0 5px rgba(0, 191, 255, 0.3);
+}
+
+.file-preview {
+    margin-top: 12px;
+    padding: 8px;
+    background: #151515;
+    border-radius: 4px;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.file-preview img {
+    border: 1px solid #333;
+}
+
+/* Checkbox styles */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.admin-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    accent-color: #007acc;
+    cursor: pointer;
+}
+
+.checkbox-text {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.checkbox-label:hover .checkbox-text {
+    color: #00bfff;
+}
+
+/* Pin indicator styling */
+.pinned-indicator {
+    display: inline-block;
+    background: #ffd700;
+    color: #000;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+/* Enhanced form group spacing */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* File input focus improvements */
+.admin-file-input::file-selector-button {
+    background: #007acc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.admin-file-input::file-selector-button:hover {
+    background: #0066aa;
+}
+
+/* Pinned Projects Styles */
+.pinned-projects {
+    padding: 80px 0;
+    background: #0a0a0a;
+}
+
+.pinned-nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.pinned-nav-btn {
+    background: #1a1a1a;
+    border: 2px solid #333;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', monospace;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pinned-nav-btn:hover {
+    border-color: #007acc;
+    color: #007acc;
+}
+
+.pinned-nav-btn.active {
+    background: #007acc;
+    border-color: #007acc;
+    color: #ffffff;
+}
+
+.pinned-content {
+    min-height: 400px;
+}
+
+.pinned-category {
+    display: none;
+}
+
+.pinned-category.active {
+    display: block;
+}
+
+.pinned-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 60px 20px;
+    color: #888;
+    font-size: 16px;
+}
+
+.empty-message p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.empty-message a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+.empty-message a:hover {
+    text-decoration: underline;
+}
+
+/* Show empty message when grid is empty */
+.pinned-category:not(:has(.pinned-grid > *)) .empty-message {
+    display: block !important;
+}
+
+.pinned-category:has(.pinned-grid > *) .empty-message {
+    display: none !important;
+}
+
+/* Fallback for browsers that don't support :has() */
+.pinned-grid:empty + .empty-message {
+    display: block !important;
+}
+
+/* Basic Admin Panel Styles */
+.admin-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+}
+
+.admin-modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-modal-content {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    color: #fff;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.admin-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+#addContentBtn {
+    background: #007acc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#addContentBtn:disabled {
+    background: #666;
+    cursor: not-allowed;
+}
+
+#addContentBtn:hover:not(:disabled) {
+    background: #0099ff;
+}
+
+.admin-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007acc;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.admin-button:hover {
+    background: #0099ff;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .file-preview img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+    
+    .checkbox-text {
+        font-size: 13px;
+    }
+    
+    .pinned-nav {
+        gap: 12px;
+    }
+    
+    .pinned-nav-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    .pinned-grid {
+        grid-template-columns: 1fr;
+    }
+}

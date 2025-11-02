@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Portfolio - Update Rebel Knight</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.gstatic.com/s/orbitron/v31/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyGy6xpmI.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Rebel Knight</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="2.games.html" class="nav-link">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a href="3.writing.html" class="nav-link">Writing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="4.music.html" class="nav-link">Music</a>
+                </li>
+                <li class="nav-item">
+                    <a href="5.experiments.html" class="nav-link">Experiments</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Rebel Knight</span></h1>
+                <p class="hero-subtitle">A musician, a writer, a creative, and a developer</p>
+                <p class="hero-description">Welcome to my website where I share my projects and connect with the world.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I'm a passionate creator who loves building digital experiences, crafting stories, and exploring the world of interactive entertainment.</p>
+                        <p>When I'm not coding or writing, you can find me diving into new games, experimenting with creative projects, jamming out to music, or learning something new.</p>
+                        <div class="skills">
+                            <h3>Skills & Interests</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Development</span>
+                                <span class="skill-tag">Creative Writing</span>
+                                <span class="skill-tag">World Building</span>
+                                <span class="skill-tag">Music</span>
+                                <span class="skill-tag">Storytelling</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pinned Projects Section -->
+        <section id="projects" class="pinned-projects">
+            <div class="container">
+                <h2 class="section-title">Pinned <span class="highlight">Projects</span></h2>
+                
+                <!-- Pinned Projects Navigation -->
+                <div class="pinned-nav">
+                    <button class="pinned-nav-btn active" data-category="games">Games</button>
+                    <button class="pinned-nav-btn" data-category="writing">Writing</button>
+                    <button class="pinned-nav-btn" data-category="music">Music</button>
+                    <button class="pinned-nav-btn" data-category="experiments">Experiments</button>
+                </div>
+                
+                <!-- Pinned Content Containers -->
+                <div class="pinned-content">
+                    <div id="pinned-games" class="pinned-category active">
+                        <div class="pinned-grid games-grid"></div>
+                        <div class="empty-message" style="display: none;">
+                            <p>No pinned games yet. Pin some games from the <a href="2.games.html">Games section</a>!</p>
+                        </div>
+                    </div>
+                    
+                    <div id="pinned-writing" class="pinned-category">
+                        <div class="pinned-grid writing-grid"></div>
+                        <div class="empty-message" style="display: none;">
+                            <p>No pinned writing yet. Pin some stories from the <a href="3.writing.html">Writing section</a>!</p>
+                        </div>
+                    </div>
+                    
+                    <div id="pinned-music" class="pinned-category">
+                        <div class="pinned-grid music-grid"></div>
+                        <div class="empty-message" style="display: none;">
+                            <p>No pinned music yet. Pin some tracks from the <a href="4.music.html">Music section</a>!</p>
+                        </div>
+                    </div>
+                    
+                    <div id="pinned-experiments" class="pinned-category">
+                        <div class="pinned-grid experiments-grid"></div>
+                        <div class="empty-message" style="display: none;">
+                            <p>No pinned experiments yet. Pin some projects from the <a href="5.experiments.html">Experiments section</a>!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Links Section -->
+        <section id="links" class="links">
+            <div class="container">
+                <h2 class="section-title">View My Work</h2>
+                <div class="links-grid">
+                    <a href="2.games.html" class="link-card">
+                        <div class="link-icon">🎮</div>
+                        <div class="link-content">
+                            <h3>Games</h3>
+                            <p>Check out my game projects and interactive experiences!</p>
+                        </div>
+                    </a>
+                    
+                    <a href="3.writing.html" class="link-card">
+                        <div class="link-icon">✍️</div>
+                        <div class="link-content">
+                            <h3>Writing</h3>
+                            <p>Read my latest stories, articles, and creative pieces!</p>
+                        </div>
+                    </a>
+                    
+                    <a href="4.music.html" class="link-card">
+                        <div class="link-icon">🎵</div>
+                        <div class="link-content">
+                            <h3>Music</h3>
+                            <p>Listen to my original music and covers!</p>
+                        </div>
+                    </a>
+                    
+                    <a href="5.experiments.html" class="link-card">
+                        <div class="link-icon">🗜</div>
+                        <div class="link-content">
+                            <h3>Experiments</h3>
+                            <p>Explore my experiments, from worlds to prototypes, and everything in between!</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+                <div class="contact-content">
+                    <p class="contact-description">Want to get in touch? Maybe a project or just to say hello? Well contact me with my email!</p>
+                    <div class="contact-methods">
+                        <a href="mailto:youremail@example.com" class="contact-method">
+                            <span class="contact-icon">📧</span>
+                            <span class="contact-text">Rebel.Knight3030@gmail.com</span>
+                        </a>
+                        <a href="#" class="contact-method">
+                            <span class="contact-icon">🌐</span>
+                            <span class="contact-text">Schedule a Call</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Rebel Knight.</p>
+        </div>
+    </footer>
+
+    <!-- Admin Panel -->
+    <div id="adminButton" class="admin-button" title="Admin Panel (Double-click)">
+        ⚙️
+    </div>
+
+    <!-- Admin Modal -->
+    <div id="adminModal" class="admin-modal">
+        <div class="admin-modal-content">
+            <div class="admin-header">
+                <h2>Content Management</h2>
+                <button class="admin-close">&times;</button>
+            </div>
+            <div class="admin-nav">
+                <button class="admin-nav-btn active" data-section="add">Add Content</button>
+                <button class="admin-nav-btn" data-section="manage">Manage Content</button>
+            </div>
+            <div id="admin-add" class="admin-section active">
+                <div class="admin-form">
+                    <label for="contentType">Content Type:</label>
+                    <select id="contentType" class="admin-select">
+                        <option value="">Select Type...</option>
+                        <option value="game">Game</option>
+                        <option value="writing">Writing</option>
+                        <option value="music">Music</option>
+                        <option value="experiment">Experiment</option>
+                    </select>
+                    <div id="dynamicForm" class="dynamic-form"></div>
+                    <button id="addContentBtn" class="admin-btn primary" disabled>Add Content</button>
+                </div>
+            </div>
+            <div id="admin-manage" class="admin-section">
+                <div class="manage-controls">
+                    <select id="manageType" class="admin-select">
+                        <option value="">Select Type to Manage...</option>
+                        <option value="game">Games</option>
+                        <option value="writing">Writing</option>
+                        <option value="music">Music</option>
+                        <option value="experiment">Experiments</option>
+                    </select>
+                </div>
+                <div id="contentList" class="content-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script-new.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
